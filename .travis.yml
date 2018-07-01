@@ -28,7 +28,7 @@ before_install:
   fi
 - yes | sudo dkp-pacman -Syu devkitPPC --needed
 - yes | sudo dkp-pacman -Syu general-tools --needed
-- wget https://github.com/decaf-emu/wut/releases/download/1.0.0-beta/wut.linux64.7z
+- wget https://github.com/decaf-emu/wut/releases/download/1.0.0-beta2/wut.linux64.7z
 install:
 - 7z x -y $(ls | grep "linux") -o${WUT_ROOT}
 - cd $PORTLIBREPOS
