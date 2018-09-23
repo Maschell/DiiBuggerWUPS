@@ -22,7 +22,22 @@ For building you need:
 
 Install them (in this order) according to their README's. Don't forget the dependencies of the libs itself.
 
+### Building using the Dockerfile
+It's possible to use a docker image for building. This way you don't need anything installed on your host system.
+
+```
+# Build docker image (only needed once
+docker build . -t diibugger-builder
+
+# make 
+docker run -it --rm -v ${PWD}:/project diibugger-builder make
+
+# make clean
+docker run -it --rm -v ${PWD}:/project diibugger-builder make clean
+```
+
 ## Credits
 - Refactoring and porting to a WUPS/wut by Maschell
 - Initially created by [Kinnay](https://github.com/Kinnay/DiiBugger)
 - CLI client by [jam1garner](https://github.com/jam1garner/diibugger-cli)
+
